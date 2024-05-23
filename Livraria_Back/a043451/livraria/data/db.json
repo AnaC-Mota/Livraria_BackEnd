@@ -1,0 +1,40 @@
+{
+  "ids": {
+    "Editora": 6,
+    "Autor": 6,
+    "Livro": 6,
+    "LivroAutorPivo": 8
+  },
+  "models": {
+    "Editora": {
+      "1": "{\"nome\":\"Arqueiro\",\"id\":1}",
+      "2": "{\"nome\":\"Lua Nova\",\"id\":2}",
+      "3": "{\"nome\":\"Mundo\",\"id\":3}",
+      "4": "{\"nome\":\"Sao Paulo\",\"id\":4}",
+      "5": "{\"nome\":\"Ltda\",\"id\":5}"
+    },
+    "Autor": {
+      "1": "{\"nome\":\"Sarah J Mass\",\"id\":1}",
+      "2": "{\"nome\":\"Sharon Lebell\",\"id\":2}",
+      "3": "{\"nome\":\"Lewis Carroll\",\"id\":3}",
+      "4": "{\"nome\":\"Nora Grey\",\"id\":4}",
+      "5": "{\"nome\":\"Dandapani\",\"id\":5}"
+    },
+    "Livro": {
+      "1": "{\"id\":1,\"titulo\":\"Lua Crescente\",\"anoPublicacao\":\"2022\",\"quantPaginas\":\"500\",\"editoraId\":1}",
+      "2": "{\"id\":2,\"titulo\":\"Alice no pais das maravilhas\",\"anoPublicacao\":\"1990\",\"quantPaginas\":\"200\",\"editoraId\":2}",
+      "3": "{\"id\":3,\"titulo\":\"O poder do habito\",\"anoPublicacao\":\"2005\",\"quantPaginas\":\"600\",\"editoraId\":3}",
+      "4": "{\"id\":4,\"titulo\":\"Contos fantasticos\",\"anoPublicacao\":\"2021\",\"quantPaginas\":\"600\",\"editoraId\":5}",
+      "5": "{\"id\":5,\"titulo\":\"Felicidade bate a porta\",\"anoPublicacao\":\"2014\",\"quantPaginas\":\"150\",\"editoraId\":4}"
+    },
+    "LivroAutorPivo": {
+      "1": "{\"autorId\":1,\"livroId\":1,\"id\":1}",
+      "2": "{\"autorId\":2,\"livroId\":2,\"id\":2}",
+      "3": "{\"autorId\":2,\"livroId\":3,\"id\":3}",
+      "4": "{\"autorId\":3,\"livroId\":3,\"id\":4}",
+      "5": "{\"autorId\":4,\"livroId\":5,\"id\":5}",
+      "6": "{\"autorId\":4,\"livroId\":4,\"id\":6}",
+      "7": "{\"autorId\":5,\"livroId\":4,\"id\":7}"
+    }
+  }
+}
