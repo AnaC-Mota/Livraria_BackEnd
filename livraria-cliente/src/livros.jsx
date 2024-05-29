@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@mui/material";
-import { SimpleList,Datagrid, List, TextField, DateField, ReferenceField, EditButton, TextInput, ReferenceInput, useRecordContext, Edit, SimpleForm, DateInput, Create } from 'react-admin';
+import { SimpleList,Datagrid, List, TextField, DateField, ReferenceField, EditButton, TextInput, ReferenceInput, useRecordContext, Edit, SimpleForm, DateInput, Create, ReferenceManyField, FunctionField, NumberField } from 'react-admin';
 
 const livroFilters = [
     <TextInput source = "titulo" label="Search titulo" alwaysOn/>,
@@ -20,9 +20,20 @@ export const LivroList = () => {
                     (<Datagrid rowClick="edit">
                         <TextField source="id"/>
                         <TextField source="titulo" />
-                        <DateField source="anoPublicacao" />
+                        <NumberField source="anoPublicacao" />
                         <TextField source="quantPaginas" />
-                        <ReferenceField source="editoraId" reference="editoras" />
+                        <ReferenceField source="editoraId" reference="editoras"/>
+                        <ReferenceManyField
+                            reference="autors"
+                            through="LivroAutorPivo"
+                            using="autorId,livroId"
+                        >
+                            <Datagrid>
+                                <FunctionField
+                                label="Autor"
+                                render={record => `${record.nome}`}/>
+                            </Datagrid>
+                        </ReferenceManyField>
                         <EditButton/>
                     </Datagrid>
                 )}
