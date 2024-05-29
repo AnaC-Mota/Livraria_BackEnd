@@ -8,7 +8,7 @@ import { AutorCreate, AutorEdit, AutorList } from './autors';
 
 import lb4Provider from 'react-admin-lb4';
 
-const dataProvider = lb4Provider('http://localhost:3000');
+const dataProvider = lb4Provider('http://localhost:3000', () => {},"id");
 
 
 import './App.css'
@@ -16,7 +16,7 @@ import './App.css'
 const App = () => (
   <Admin dataProvider={dataProvider}>
     <Resource name="livros" list={LivroList} edit={LivroEdit} create={LivroCreate}/>
-    <Resource name="editoras" list={EditoraList} edit={EditoraEdit} create={EditoraCreate}/>
+    <Resource name="editoras" list={EditoraList} edit={EditoraEdit} create={EditoraCreate} recordRepresentation="nome"/>
     <Resource name="autors" list={AutorList} edit={AutorEdit} create={AutorCreate}/>
   </Admin>
 );  
